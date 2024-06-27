@@ -5,52 +5,56 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  :  | DEL  |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P     &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp COLON &kp DEL
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH  &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB  |  BT1  | BT2 | BT3 | BT4 | BT5 |   |  7  |  8  |  9  |  =   |  UP  | BKSP |
-// | CTRL  | BTCLR |     |     |     |     |   |  4  |  5  |  6  | LEFT | DOWN | RGT  |
-// | SHFT  |       |     |     |     |     |   |  1  |  2  |  3  |  +   |   -  |      |
-//                    | GUI |     | SPC |   | ENT |  0  | ALT |
-                        bindings = <
-   &kp TAB    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp N7   &kp N8   &kp N9 &kp MINUS &kp EQUAL &kp BSPC
-   &kp LCTRL  &bt BT_CLR   &trans       &trans       &trans       &trans         &kp N4   &kp N5   &kp N6 &kp PLUS  &kp UP    &kp DEL
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &kp N1   &kp N2   &kp N3 &kp LEFT  &kp DOWN  &kp RIGHT
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &kp N0   &kp RALT
-                        >;
-                };
+        default_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  :  | DEL  |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |  ~  |  \  |     |  '  |  "  |   |  ?  |  :  |  ;  |  [  |  ]  |  DEL |
-// | SHFT |  `  | "|" |     |     |     |   |  _  |  <  |  >  |  {  |  }  |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TAB   &kp EXCL  &kp AT   &kp HASH &kp DLLR &kp PRCNT   &kp CARET    &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &kp GRAVE &kp BSLH &trans   &kp SQT  &kp DQT     &kp QUESTION &kp COLON &kp SEMI  &kp LBKT &kp RBKT &kp DEL
-   &kp LSHFT &kp TILDE &kp PIPE &trans   &trans   &trans      &kp UNDER    &kp LT    &kp GT    &kp LBRC &kp RBRC &kp ESC
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
-                };
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P      &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp COLON  &kp DEL
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp ESC
+                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+            >;
         };
-};
+
+        lower_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB  |  BT1  | BT2 | BT3 | BT4 | BT5 |   |  7  |  8  |  9  |  =   |  UP  | BKSP |
+            // | CTRL  | BTCLR |     |     |     |     |   |  4  |  5  |  6  | LEFT | DOWN | RGT  |
+            // | SHFT  |       |     |     |     |     |   |  1  |  2  |  3  |  +   |   -  |      |
+            //                    | GUI |     | SPC |   | ENT |  0  | ALT |
+
+            bindings = <
+&kp TAB    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3   &bt BT_SEL 4    &kp N7   &kp N8  &kp N9    &kp MINUS  &kp EQUAL  &kp BSPC
+&kp LCTRL  &bt BT_CLR    &trans        &trans            &trans         &trans          &kp N4   &kp N5  &kp N6    &kp PLUS   &kp UP     &kp DEL
+&kp LSHFT  &trans        &trans        &kp LG(LC(RALT))  &kp RA(LCTRL)  &trans          &kp N1   &kp N2  &kp N3    &kp LEFT   &kp DOWN   &kp RIGHT
+                                       &kp LGUI          &trans         &kp SPACE       &kp RET  &kp N0  &kp RALT
+            >;
+        };
+
+        raise_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            // | CTRL |  ~  |  \  |     |  '  |  "  |   |  ?  |  :  |  ;  |  [  |  ]  |  DEL |
+            // | SHFT |  `  | "|" |     |     |     |   |  _  |  <  |  >  |  {  |  }  |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&kp TAB    &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&kp LCTRL  &kp GRAVE  &kp BSLH  &trans    &kp SQT   &kp DQT      &kp QUESTION  &kp COLON  &kp SEMI   &kp LBKT  &kp RBKT  &kp DEL
+&kp LSHFT  &kp TILDE  &kp PIPE  &trans    &trans    &trans       &kp UNDER     &kp LT     &kp GT     &kp LBRC  &kp RBRC  &kp ESC
+                                &kp LGUI  &trans    &kp SPACE    &kp RET       &trans     &kp RALT
+            >;
+        };
+    };
+}
