@@ -13,14 +13,16 @@
         macro_all_mods: macro_all_mods {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LGUI &kp RALT &kp LCTRL>;
+            bindings = <&macro_press>, <&kp LGUI &kp RALT &kp LCTRL>;
+
             label = "MACRO_ALL_MODS";
         };
 
         macro_ctrl_alt: macro_ctrl_alt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RALT &kp LCTRL>;
+            bindings = <&macro_press>, <&kp RALT &kp LCTRL>;
+
             label = "MACRO_CTRL_ALT";
         };
     };
