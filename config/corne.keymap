@@ -99,7 +99,7 @@
             //                    | GUI |     | SPC |   | ENT |  0  | ALT |
 
             bindings = <
-&kp TAB    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &bt BT_SEL 0   &kp UP         &bt BT_CLR    &kp N7   &kp N8  &kp N9    &kp MINUS   &kp EQUAL     &kp BSPC
+&kp TAB    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &bt BT_SEL 0   &kp UP         &trans        &kp N7   &kp N8  &kp N9    &kp MINUS   &kp EQUAL     &kp BSPC
 &kp LCTRL  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LEFT       &kp DOWN       &kp RIGHT     &kp N4   &kp N5  &kp N6    &kp PLUS    &kp ASTERISK  &kp DEL
 &kp LSHFT  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mac_all_mods  &mac_alt_ctrl  &mac_enter    &kp N1   &kp N2  &kp N3    &kp PERIOD  &kp SLASH     &kp ESC
                                                         &kp LGUI       &trans         &kp SPACE     &kp RET  &kp N0  &kp RALT
@@ -118,15 +118,6 @@
 &kp LCTRL  &kp GRAVE  &kp BSLH  &trans    &kp SQT        &kp DQT       &kp QUESTION  &kp COLON  &kp SEMI   &trans    &kp UP    &kp DEL
 &kp LSHFT  &kp TILDE  &kp PIPE  &trans    &option_shift  &cmd_shift    &kp UNDER     &kp LT     &kp GT     &kp LEFT  &kp DOWN  &kp RIGHT
                                 &kp LGUI  &trans         &kp SPACE     &kp RET       &trans     &kp RALT
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
