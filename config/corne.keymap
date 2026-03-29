@@ -98,10 +98,10 @@
             //                    | GUI |     | SPC |   | ENT |  0  | ALT |
 
             bindings = <
-&trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans         &trans    &kp LEFT_ALT    &kp N7   &kp N8  &kp N9     &kp MINUS   &kp EQUAL     &kp BSPC
-&kp LG(V)  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LEFT       &kp DOWN  &kp RIGHT       &kp N4   &kp N5  &kp N6     &kp PLUS    &kp ASTERISK  &kp DEL
-&kp LG(C)  &kp LEFT_BRACE        &kp RIGHT_BRACE        &option_shift  &trans    &mac_enter      &kp N1   &kp N2  &kp N3     &kp PERIOD  &kp SLASH     &kp ESC
-                                                        &kp LGUI       &trans    &kp SPACE       &kp RET  &kp N0  &kp LCTRL
+&trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans         &kp UP         &kp LEFT_ALT    &kp N7   &kp N8  &kp N9     &kp MINUS   &kp EQUAL     &kp BSPC
+&kp LG(V)  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LEFT       &kp DOWN       &kp RIGHT       &kp N4   &kp N5  &kp N6     &kp PLUS    &kp ASTERISK  &kp DEL
+&kp LG(C)  &kp LEFT_BRACE        &kp RIGHT_BRACE        &option_shift  &mac_alt_ctrl  &mac_enter      &kp N1   &kp N2  &kp N3     &kp PERIOD  &kp SLASH     &kp ESC
+                                                        &kp LGUI       &trans         &kp SPACE       &kp RET  &kp N0  &kp LCTRL
             >;
         };
 
